@@ -14,11 +14,21 @@ public class ParkingLot {
     }
 
 
-    public void addCar() {
-        capacity--;
+    public boolean addVehicle() {
+        if(this.isFull()){
+            System.out.println("Parking is full. Vehicle cannot be parked");
+            return false;
+        }
+
+        else
+        {
+            capacity--;
+            return true;
+        }
+
     }
 
-    public void removeCar() {
+    public void removeVehicle() {
         capacity++;
     }
 }

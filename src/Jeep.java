@@ -1,4 +1,21 @@
-package PACKAGE_NAME;
+public class Jeep extends Vehicle{
 
-public class Jeep {
+    @Override
+    public void notifyPark() {
+
+
+            System.out.println("Jeep parked");
+
+
+
+    }
+
+    @Override
+    public void notifyUnPark() {
+        System.out.println("Jeep unparked");
+
+
+    }
+
+
 }

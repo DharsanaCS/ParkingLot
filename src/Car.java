@@ -1,10 +1,22 @@
-public class Car {
+public class Car extends Vehicle {
 
     private String registrationNumber;
     private String status;
 
+    @Override
+    public void notifyPark() {
+            System.out.println("Car parked");
+    }
 
-    public void park(ParkingLot parkLot)
+    @Override
+    public void notifyUnPark() {
+        System.out.println("Car Unparked");
+    }
+
+
+
+
+   /* public void park(ParkingLot parkLot)
     {
         if(parkLot.isFull())
             System.out.println("Parking is full");
@@ -26,7 +38,7 @@ public class Car {
         parkLot.removeCar();
 
 
-    }
+    }*/
 
 
 }

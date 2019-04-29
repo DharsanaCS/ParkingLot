@@ -1,4 +1,21 @@
-package PACKAGE_NAME;
+public abstract class Vehicle implements Parkable {
 
-public class Vehicle {
+    public void park(ParkingLot parkLot){
+        if(parkLot.addVehicle()) notifyPark();
+    }
+
+    public void unpark(ParkingLot parkLot)
+    {
+        parkLot.removeVehicle();
+        notifyUnPark();
+    }
+
+    abstract public void notifyPark();
+
+    abstract public void notifyUnPark();
+
+
+
 }
+
+
